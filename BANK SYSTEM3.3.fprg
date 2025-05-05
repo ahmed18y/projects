@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="BANK SYSTEM"/>
+        <attribute name="authors" value="user"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-12-17 03:57:06 PM"/>
+        <attribute name="created" value="dXNlcjtERVNLVE9QLTgyT0dLN1U7MjAyNC0xMi0xNDswNTo1MjowMSBQTTsyNzc0"/>
+        <attribute name="edited" value="dXNlcjtERVNLVE9QLTgyT0dLN1U7MjAyNC0xMi0xNzswMzo1NzowNiBQTTsxMzsyOTQ0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Bank......&quot;" newline="True"/>
+            <output expression="&quot; &quot;" newline="True"/>
+            <output expression="&quot; &quot;" newline="True"/>
+            <output expression="&quot; &quot;" newline="True"/>
+            <output expression="&quot; &quot;" newline="True"/>
+            <output expression="&quot;1. Create New Account&quot;" newline="True"/>
+            <output expression="&quot;2. log-in&quot;" newline="True"/>
+            <declare name="choice" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter Your Choice&quot;" newline="True"/>
+            <input variable="choice"/>
+            <declare name="accnum" type="Integer" array="False" size=""/>
+            <declare name="accname" type="String" array="False" size=""/>
+            <declare name="yrname" type="String" array="False" size=""/>
+            <declare name="idcard" type="Integer" array="False" size=""/>
+            <declare name="balance" type="Real" array="False" size=""/>
+            <declare name="password" type="Integer" array="False" size=""/>
+            <declare name="pin" type="Integer" array="False" size=""/>
+            <if expression="choice==1">
+                <then>
+                    <output expression="&quot;CREATING NEW ACCOUNT&quot;" newline="True"/>
+                    <output expression="&quot;__________________________________________________________&quot;" newline="True"/>
+                    <output expression="&quot; &quot;" newline="True"/>
+                    <output expression="&quot; &quot;" newline="True"/>
+                    <output expression="&quot; &quot;" newline="True"/>
+                    <output expression="&quot;Enter Account Number: &quot;" newline="False"/>
+                    <input variable="accnum"/>
+                    <output expression="&quot;Enter Account Name: &quot;" newline="True"/>
+                    <input variable="accname"/>
+                    <output expression="&quot;Enter your name&quot;" newline="True"/>
+                    <input variable="yrname"/>
+                    <output expression="&quot;Enter Your ID card number&quot;" newline="True"/>
+                    <input variable="idcard"/>
+                    <output expression="&quot;Enter the pin&quot;" newline="True"/>
+                    <input variable="pin"/>
+                    <output expression="&quot;Enter Balance: &quot;" newline="True"/>
+                    <input variable="balance"/>
+                    <output expression="&quot;Enter Password With Integer Numbers Only!!&quot;" newline="True"/>
+                    <input variable="password"/>
+                    <output expression="&quot;*YOUR ACCOUNT CREATED SUCCESSFULLY*&quot;" newline="True"/>
+                    <declare name="i" type="Integer" array="False" size=""/>
+                    <declare name="accnum2" type="Integer" array="False" size=""/>
+                    <declare name="accname2" type="String" array="False" size=""/>
+                    <declare name="password2" type="Integer" array="False" size=""/>
+                    <declare name="pin2" type="Integer" array="False" size=""/>
+                    <declare name="idcard2" type="Integer" array="False" size=""/>
+                    <assign variable="i" expression="0"/>
+                    <do expression="i=0">
+                        <output expression="&quot;login&quot;" newline="True"/>
+                        <output expression="&quot;Enter Account Number: &quot;" newline="False"/>
+                        <input variable="accnum2"/>
+                        <output expression="&quot;Enter Password With Integer Numbers Only!!&quot;" newline="True"/>
+                        <input variable="password2"/>
+                        <output expression="&quot;Enter the pin&quot;" newline="True"/>
+                        <input variable="pin2"/>
+                        <output expression="&quot;Enter your account name&quot;" newline="True"/>
+                        <input variable="accname2"/>
+                        <output expression="&quot;Enter the number of your Id card&quot;" newline="True"/>
+                        <input variable="idcard2"/>
+                        <if expression="accnum2==accnum&amp;&amp;password2==password&amp;&amp;pin2==pin&amp;&amp;accname2==accname&amp;&amp;idcard2==idcard">
+                            <then>
+                                <output expression="&quot;SUCCESSFULLY LOGGED IN&quot;" newline="True"/>
+                                <assign variable="i" expression="1"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;Account not found&quot;" newline="True"/>
+                                <assign variable="i" expression="0"/>
+                            </else>
+                        </if>
+                    </do>
+                </then>
+                <else>
+                    <if expression="choice==2">
+                        <then>
+                            <output expression="&quot;LOGGING IN&quot;" newline="True"/>
+                            <output expression="&quot;__________________________________________________________&quot;" newline="True"/>
+                            <output expression="&quot; &quot;" newline="True"/>
+                            <output expression="&quot; &quot;" newline="True"/>
+                            <output expression="&quot; &quot;" newline="True"/>
+                            <output expression="&quot;Enter Account Number: &quot;" newline="False"/>
+                            <input variable="accnum"/>
+                            <output expression="&quot;Enter Account Name: &quot;" newline="True"/>
+                            <input variable="accname"/>
+                            <output expression="&quot;Enter Password With Integer Numbers Only!!&quot;" newline="True"/>
+                            <input variable="password"/>
+                            <output expression="&quot;Enter the pin&quot;" newline="True"/>
+                            <input variable="pin"/>
+                            <output expression="&quot;Enter Balance: &quot;" newline="True"/>
+                            <input variable="balance"/>
+                            <output expression="&quot;SUCCESSFULLY LOGGED IN&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Invalid Choice&quot;" newline="True"/>
+                            <breakpoint expression="" always="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;WELCOME&quot;" newline="True"/>
+            <output expression="&quot;__________________________________________________________&quot;" newline="True"/>
+            <output expression="&quot; &quot;" newline="True"/>
+            <output expression="&quot; &quot;" newline="True"/>
+            <output expression="&quot;YOUR ACCOUNT NAME: &quot;" newline="True"/>
+            <output expression="accname" newline="True"/>
+            <output expression="&quot;YOUR ACCOUNT NUMBER: &quot;" newline="True"/>
+            <output expression="accnum" newline="True"/>
+            <output expression="&quot;YOUR BALANCE : &quot;" newline="True"/>
+            <output expression="balance" newline="True"/>
+            <declare name="choice2" type="Integer" array="False" size=""/>
+            <output expression="&quot;1.Deposit&quot;" newline="True"/>
+            <output expression="&quot;2. Withdraw&quot;" newline="True"/>
+            <output expression="&quot;3. Close The Program &quot;" newline="True"/>
+            <output expression="&quot;Enter Your Choice: &quot;" newline="False"/>
+            <input variable="choice2"/>
+            <while expression="choice2!=0">
+                <if expression="choice2==1">
+                    <then>
+                        <declare name="amount" type="Real" array="False" size=""/>
+                        <output expression="&quot;Enter Amount to Deposit: &quot;" newline="True"/>
+                        <input variable="amount"/>
+                        <if expression="amount&gt;0">
+                            <then>
+                                <output expression="&quot;SUCCESSFULLY DONE&quot;" newline="True"/>
+                                <output expression="&quot;your Balance Now Is : &quot;" newline="True"/>
+                                <assign variable="balance" expression="balance+amount"/>
+                                <output expression="(balance+amount)" newline="True"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;REJECTED&quot;" newline="True"/>
+                            </else>
+                        </if>
+                    </then>
+                    <else>
+                        <if expression="choice2==2">
+                            <then>
+                                <declare name="withamount" type="Real" array="False" size=""/>
+                                <output expression="&quot;Enter Amount to Withdraw: &quot;" newline="True"/>
+                                <input variable="withamount"/>
+                                <if expression="withamount&gt;0">
+                                    <then>
+                                        <output expression="&quot;SUCCESSFULLY DONE&quot;" newline="True"/>
+                                        <output expression="&quot;YOUR BALANCE NOW IS: &quot;" newline="True"/>
+                                        <assign variable="balance" expression="balance-withamount"/>
+                                        <output expression="(balance-withamount)" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <output expression="&quot;REJECTED&quot;" newline="True"/>
+                                    </else>
+                                </if>
+                            </then>
+                            <else>
+                                <if expression="choice2==3">
+                                    <then>
+                                        <output expression="&quot;CLOSING THE PROGRAM.................THANK YOU&quot;" newline="True"/>
+                                        <breakpoint expression="" always="True"/>
+                                    </then>
+                                    <else>
+                                        <output expression="&quot;INVALID CHOICE&quot;" newline="True"/>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <output expression="&quot;1.Deposit&quot;" newline="True"/>
+                <output expression="&quot;2. Withdraw&quot;" newline="True"/>
+                <output expression="&quot;3. Close The Program &quot;" newline="True"/>
+                <output expression="&quot;Enter Your Choice: &quot;" newline="False"/>
+                <input variable="choice2"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
